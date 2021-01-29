@@ -151,7 +151,7 @@ $(document).ready(function () {
       balloonContent: 'Это красивая метка'
     }, {
       iconLayout: 'default#image',
-      iconImageHref: '/dist/img/icon/pin.png',
+      iconImageHref: 'img/icon/pin.png',
       iconImageSize: [50, 50],
       iconImageOffset: [-5, -38]
     });
