@@ -1,0 +1,155 @@
+body {
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: $FontMain;
+  color: $main-color;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &--full {
+    max-width: 1400px;
+
+    
+  }
+
+  @media screen and (max-width: 1350px) {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: $screen-sm-down) {
+  padding-left: 18px;
+    padding-right: 18px;
+
+    &--full {
+      padding-left: 0;
+      padding-right: 0;
+  }
+}
+}
+
+.content {
+  width: 100%;
+  max-width: 1072px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 1350px) {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+}
+
+.common__title {
+  color: #ffffff;
+  font-size: 150px;
+  line-height: 120%;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  @media screen and (max-width: $screen-md-down) {
+      font-size: 70px;
+  }
+
+  @media screen and (max-width: $screen-sm-down) {
+    font-size: 50px;
+}
+}
+
+.common__subtitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 27px;
+
+    @media screen and (max-width: $screen-sm-down) {
+      flex-direction: column;
+      align-items: start;
+      padding-left: 18px;
+      padding-right: 18px;
+   }
+  }
+
+  &--half {
+    max-width: 50%;
+
+    @media screen and (max-width: $screen-sm-down) {
+      max-width: 100%;
+      margin-bottom: 20px;
+   }
+  }
+
+  &--prm {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 1px;
+      background-color: $main-color;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: $screen-sm-down) {
+      padding-top: 10px;
+   }
+  }
+
+  &--light {
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: $screen-sm-down) {
+    font-size: 30px;
+  }
+}
+
+.common__text {
+  margin-top: 30px;
+}
+
+.common__button {
+  &-box {
+    margin-top: 32px;
+  }
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

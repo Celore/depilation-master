@@ -1,0 +1,16 @@
+.social {
+  display: flex;
+
+  &__link {
+    margin-right: 27px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--full {
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}

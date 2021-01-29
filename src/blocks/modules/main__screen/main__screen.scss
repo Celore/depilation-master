@@ -1,0 +1,29 @@
+.main__screen {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/main/main-screen/screen.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &-subtitle {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 20px;
+    }
+
+    @media screen and (max-width: $screen-md-down) {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @media screen and (max-width: $screen-sm-down) {
+       padding-top: 20px;
+       padding-bottom: 130px;
+    }
+}

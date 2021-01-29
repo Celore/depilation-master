@@ -1,0 +1,22 @@
+.logo {
+  max-width: max-content;
+ &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $screen-sm-down) {
+      justify-content: space-between;
+  }
+ }
+
+ span {
+  display: block;
+    font-family: 'Poiret One', cursive;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    border: 1px solid #FFFFFF;
+    padding: 9px 39px;
+ }
+}

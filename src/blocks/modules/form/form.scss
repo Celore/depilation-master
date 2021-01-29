@@ -1,0 +1,93 @@
+.form {
+    border: 1px solid #000000;
+    padding: 41px 30px 60px 30px;
+    width: 100%;
+    max-width: 500px;
+
+    @media screen and (max-width: $screen-md-down) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: $screen-md-down) {
+        padding: 20px;
+    }
+    
+    &__wrap {
+        margin-top: 300px;
+        padding-top: 240px;
+        padding-bottom: 100px;
+        background-image: url(../img/main/form/form.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width: $screen-md-down) {
+            margin-top: 100px;
+            padding: 20px 0;
+        }
+    }
+
+    &__title {
+        font-size: 40px;
+    }
+
+    &__subtitle {
+        font-size: 30px;
+        display: block;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: $screen-md-down) {
+            font-size: 20px;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__inner {
+        
+    }
+
+    &__item {
+        margin-bottom: 20px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        font-family: $FontText;
+        font-size: 12px;
+        width: 100%;
+        border: 1px solid #000000;
+        padding: 15px;
+        background-color: transparent;
+        &[data-type='date'] {
+            background-image: url(/img/icon/calendar.svg);
+            background-position: 96% center;
+            background-repeat: no-repeat;
+        }
+
+        &--light {
+            color: #ABAAAA;
+            border: 1px solid #FFFFFF;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        width: 100%;
+        color: #ABAAAA;
+        border: 1px solid #FFFFFF;
+        background: transparent;
+        padding: 15px;
+        font-family: $FontText;
+        font-size: 12px;
+    }
+
+    &--full {
+        max-width: 100%;
+        border: 1px solid #FFFFFF;
+    }
+}

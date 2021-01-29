@@ -1,0 +1,182 @@
+.btn {
+    display: block;
+    border: 1px solid $main-color;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 10px 35px;
+    transition: .3s;
+    cursor: pointer;
+
+    span {
+        font-family: $FontText;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 28px;
+        color: $main-color;
+        transition: color .3s;
+    }
+
+
+    &:hover {
+        background: rgba(0,0,0,.75);
+
+        span {
+            color: #ffffff;
+        }
+    }
+
+    &--light {
+        border: 1px solid #ffffff;
+
+        span {
+            color: #ffffff;
+        }
+
+        &:hover {
+            background-color: #ffffff;
+
+            span {
+                color: $main-color;
+            }
+        }
+    }
+
+    &__popup {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        font-style: italic;
+        font-size: 20px;
+        border: 1px solid $main-color;
+    }
+}
+
+.btn__review {
+    display: flex;
+    background: transparent;
+    padding: 0;
+    border: none;
+    span {
+        font-size: 20px;
+        line-height: 28px;
+        font-style: italic;
+        color: $main-color;
+        display: block;
+        margin-right: 20px;
+    }
+
+    &:hover {
+        svg {
+            transform: translateX(15px);
+        }
+    }
+
+    svg {
+        transition: .3s;
+    }
+}
+
+.button__up {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    right: 0;
+    left: 0;
+    bottom: 60px;
+    background: transparent;
+    border: none;
+    margin: auto;
+    animation: moveDown 1s ease-in-out infinite;
+
+    svg {
+        path {
+            stroke: #ffffff;
+        }
+    }
+
+    &.rotate {
+        position: fixed;
+        top: 100px;
+        left: 120px;
+        bottom: unset;
+        right: unset;
+        animation: moveUp 1s ease-in-out infinite;
+        transform: rotate(-180deg);
+        z-index: 10;
+        svg {
+            path {
+                stroke: #000000;
+            }
+        }
+
+        @media screen and (max-width: $screen-md-down) {
+            left: 30px;
+        }
+
+        @media screen and (max-width: $screen-sm-down) {
+            padding-left: 18px;
+              padding-right: 18px;
+          }
+
+        
+    }
+
+    @media screen and (max-width: $screen-sm-down) {
+        justify-content: space-between;
+    }
+}
+
+.button__back {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 0;
+    border: none;
+
+    span {
+        display: block;
+        margin-left: 6px;
+        color: #ffffff;
+        font-family: $FontText;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: rotate(-180deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-180deg) translateY(-10px);
+    }
+
+    100% {
+        transform: rotate(-180deg) translateY(0);
+    }
+}
+
+.button__menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+
+    @media screen and (max-width: $screen-sm-down) {
+        display: block;
+    }
+}
+
