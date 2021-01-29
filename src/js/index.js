@@ -3,6 +3,8 @@ import './import/modules.js';
 $(document).ready(function () {
     const window = $(this);
 
+    console.log(window)
+
     var sliderReviews = new Swiper('.js-reviews-slider', {
         grabCursor: false,
         loop: true,
@@ -44,7 +46,7 @@ $(document).ready(function () {
                 balloonContent: 'Это красивая метка'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'img/icon/pin.png',
+                iconImageHref: '/img/icon/pin.png',
                 iconImageSize: [50, 50],
                 iconImageOffset: [-5, -38]
             })
