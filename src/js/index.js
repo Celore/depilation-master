@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
-                center: [55.751574, 37.573856],
+                center: [52.322197, 35.373473],
                 zoom: 9
             }, {
                 searchControlProvider: 'yandex#search'
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 balloonContent: 'Это красивая метка'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/pin.png',
+                iconImageHref: './img/icon/pin.png',
                 iconImageSize: [50, 50],
                 iconImageOffset: [-5, -38]
             })
