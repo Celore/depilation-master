@@ -51,7 +51,9 @@
         text-align: center;
         margin-bottom: 10px;
         transition: background .3s ;
+        width: 100%;
         max-width: 290px;
+        border: none;
 
         &--rotate {
             position: absolute;
@@ -60,11 +62,13 @@
             margin: 0;
             left: 0;
             top: 0;
+            width: unset;
 
             @media screen and (max-width: $screen-sm-down) {
                transform: rotate(0) translate(0);
                position: unset;
                margin-bottom: 10px;
+               width: 100%;
             }
         }
 
@@ -156,6 +160,7 @@
         align-items: center;
         font-size: 14px;
         font-weight: 300;
+        font-family: $FontText;
 
         &:before {
             content: '';
@@ -276,6 +281,11 @@
             &:before {
                 background-color: #fff;
             }
+        }
+
+        &--teip {
+            left: -100px;
+            top: 70px;
         }
 
         

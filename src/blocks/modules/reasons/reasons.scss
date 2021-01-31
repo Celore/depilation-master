@@ -6,23 +6,25 @@
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
+        max-width: 750px;
+        width: 100%;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1350px) {
+            max-width: 100%;
+        }
 
         &-inner {
             margin-top: 90px;
-            padding-left: 36%;
             margin-bottom: -80px;
-
-            @media screen and (max-width: 1350px) {
-               padding-left: 0;
-            }
+            margin-left: auto;
         }
 
         &-item {
             position: relative;
             border: 1px solid $main-color; 
             padding: 84px 12px 20px;
-            width: calc(100%/2 - 80px);
-            margin-right: 80px;
+            width: calc(100%/2 - 40px);
             margin-bottom: 80px;
             &:nth-child(2n) {
                 margin-right: 0;
@@ -84,13 +86,13 @@
     }
 
     &__image {
-
         &-item {
             position: absolute;
             top: 0;
             left: 0;
+            width: 400px;
             &--first {
-                transform: translate(131px, 164px);
+                transform: translate(189px, 164px);
                 z-index: 3;
             }
 
@@ -100,7 +102,7 @@
             }
 
             &--thirt {
-                transform: translate(280px, 66px);
+                transform: translate(435px, 66px);
                 z-index: 1;
             }
 
@@ -108,13 +110,40 @@
                 width: 100%;
             }
 
-            @media screen and (max-width: $screen-xl) {
-                width: 200px;
+            @media screen and (max-width: 1780px) {
+                width: unset;
             }
+
+            @media screen and (max-width: $screen-xl) {
+                width: 250px;
+            }
+
+            @media screen and (max-width: 1500px) {
+                width: 200px;
+
+                &--first {
+                    transform: translate(139px, 164px);
+                }
+    
+                &--second {
+                    transform: translate(0px, 316px);
+                    z-index: 2;
+                }
+    
+                &--thirt {
+                    transform: translate(330px, 66px);
+                }
+            }
+
+            
         }
 
         @media screen and (max-width: 1350px) {
             display: none;
         }
+    }
+
+    @media screen and (max-width: $screen-sm-down) {
+       padding: 0 18px;
     }
 }

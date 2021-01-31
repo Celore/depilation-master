@@ -13,8 +13,21 @@ $(document).ready(function () {
             crossFade: true
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.js-button-reviews-next',
+            prevEl: '.js-button-reviews-prev',
+        },
+    });
+
+    var sliderBlog = new Swiper('.js-blog-slider', {
+        grabCursor: false,
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: '.js-button-blog-next',
+            prevEl: '.js-button-blog-prev',
         },
     });
 
@@ -64,7 +77,7 @@ $(document).ready(function () {
 
         buttonCloseModal.on('click', function() {
             $(this).closest('.modal').removeClass('active');
-        });
+        });  
     }
 
     window.on('click','.js-button-up', function() {
@@ -95,4 +108,51 @@ $(document).ready(function () {
     $('.js-menu-close').on('click', function() {
         $('.menu').removeClass('active');
     });
+
+    const priceButton = $('.js-button-price');
+    const modalPrice = $('.js-modal-price');
+
+    if (modalPrice) {
+        priceButton.on('click', function() {
+            const type = $(this).data('type');
+            const title = $(this).text();
+            $(`.modal--price[data-type="${type}"]`).addClass('active');
+            $(`.modal--price[data-type="${type}"]`).find('.js-modal-title').text(title);
+            if (type == 'legs') {
+                const butt = $(this).data('buttocks');
+                $(`.modal--price[data-type="${type}"]`).find('[data-buttocks]').find('.js-modal-price-text').text(butt);
+                const hips = $(this).data('hips');
+                $(`.modal--price[data-type="${type}"]`).find('[data-hips]').find('.js-modal-price-text').text(hips);
+                const knees = $(this).data('knees');
+                $(`.modal--price[data-type="${type}"]`).find('[data-knees]').find('.js-modal-price-text').text(knees);
+                const legsfull = $(this).data('legsfull');
+                $(`.modal--price[data-type="${type}"]`).find('[data-legsfull]').find('.js-modal-price-text').text(legsfull)
+            } else if (type == 'hands') {
+                const elbow = $(this).data('elbow');
+                $(`.modal--price[data-type="${type}"]`).find('[data-elbow]').find('.js-modal-price-text').text(elbow);
+                const full = $(this).data('full');
+                $(`.modal--price[data-type="${type}"]`).find('[data-full]').find('.js-modal-price-text').text(full);
+                const armpits = $(this).data('armpits');
+                $(`.modal--price[data-type="${type}"]`).find('[data-armpits]').find('.js-modal-price-text').text(armpits);
+            } else if (type == 'body') {
+                const full = $(this).data('full');
+                $(`.modal--price[data-type="${type}"]`).find('[data-full]').find('.js-modal-price-text').text(full);
+                const road = $(this).data('road');
+                $(`.modal--price[data-type="${type}"]`).find('[data-road]').find('.js-modal-price-text').text(road);
+                const back = $(this).data('back');
+                $(`.modal--price[data-type="${type}"]`).find('[data-back]').find('.js-modal-price-text').text(back);
+                const sback = $(this).data('sback');
+                $(`.modal--price[data-type="${type}"]`).find('[data-sback]').find('.js-modal-price-text').text(sback);
+                const bikiniclassic = $(this).data('bikiniclassic');
+                $(`.modal--price[data-type="${type}"]`).find('[data-bikiniclassic]').find('.js-modal-price-text').text(bikiniclassic);
+                const bikinideep = $(this).data('bikinideep');
+                $(`.modal--price[data-type="${type}"]`).find('[data-bikinideep]').find('.js-modal-price-text').text(bikinideep);
+            } else if (type == 'face') {
+                const lip = $(this).data('lip');
+                $(`.modal--price[data-type="${type}"]`).find('[data-lip]').find('.js-modal-price-text').text(lip);
+                const full = $(this).data('full');
+                $(`.modal--price[data-type="${type}"]`).find('[data-full]').find('.js-modal-price-text').text(full);
+            }
+        })
+    }
 });
