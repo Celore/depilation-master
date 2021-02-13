@@ -59,6 +59,10 @@
                width: calc(100% - 68px);
                margin-right: 18px;
             }
+
+            @media screen and (max-width: $screen-xs-down) {
+                margin-right: 0;
+            }
         }
 
         &-title {
@@ -105,11 +109,13 @@
     }
 
     .swiper-button__wrap {
+        position: relative;
         width: 100%;
         margin-top: 103px;
         display: flex;
         align-items: center;
         justify-content: center;
+    
     }
 
     .swiper-button-prev {

@@ -73,6 +73,10 @@
             color: #ABAAAA;
             border: 1px solid #FFFFFF;
         }
+
+        &::placeholder {
+            color: #CECECE;
+        }
     }
 
     &__textarea {

@@ -7,6 +7,7 @@
     z-index: 200;
     transform: translateX(-100%);
     transition: transform .7s;
+    overflow: auto;
     &--reviews {
         background-image: url(../img/main/main-screen/screen.jpg);
         background-position: center;
@@ -21,8 +22,9 @@
     &__inner {
         display: flex;
         padding-top: 96px;
-        overflow: auto;
         height: 100%;
+        max-width: 1200px;
+        margin: auto;
     }
 
     .form {
