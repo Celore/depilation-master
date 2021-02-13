@@ -30,11 +30,11 @@ $(document).ready(function () {
     });
 
     $('input[data-type="phone"]').mask("+7 (999) 999-9999");
-    $('input[data-type="email"').mask("A", {
+    $('input[data-type="email"]').mask("A", {
         translation: {
             "A": { pattern: /[\w@\-.+]/, recursive: true }
         }
-    });;
+    });
     jQuery.datetimepicker.setLocale('ru');
     $('input[data-type="date"]').datetimepicker({
         timepicker:false,
@@ -43,21 +43,21 @@ $(document).ready(function () {
 
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
-                center: [52.322197, 35.373473],
-                zoom: 9
+                center: [52.3224345044705,35.37293399999999],
+                zoom: 17
             }, {
                 searchControlProvider: 'yandex#search'
             }),
                 MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
                 '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
             ),
-    
+
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                hintContent: 'Собственный значок метки',
-                balloonContent: 'Это красивая метка'
+                /*hintContent: 'Собственный значок метки',
+                balloonContent: 'Это красивая метка'*/
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/pin.png',
+                iconImageHref: './img/icon/pin.png',
                 iconImageSize: [50, 50],
                 iconImageOffset: [-5, -38]
             })
@@ -77,11 +77,11 @@ $(document).ready(function () {
         buttonCloseModal.on('click', function() {
             $(this).closest('.modal').removeClass('active');
             $('body').removeClass('overflow');
-        });  
+        });
     }
 
     window.on('click','.js-button-up', function() {
-        $('html, body').animate({scrollTop:0}, '300');
+        $('html, body').animate({scrollTop:0}, 300);
     });
 
     $('.js-anchors').bind("click", function (e) {
@@ -91,14 +91,14 @@ $(document).ready(function () {
         }, 1000);
         e.preventDefault();
     });
-    
+
 
     window.on('scroll', function() {
         const scrollHeight = $(this).scrollTop();
         const breakpoint = $('.reasons');
         const breakpointPosition = breakpoint.offset().top;
-        
-        scrollHeight > (breakpointPosition - 100) ? $('.button__up').addClass('js-button-up rotate') : $('.button__up').removeClass('.js-button-up rotate') 
+
+        scrollHeight > (breakpointPosition - 100) ? $('.button__up').addClass('js-button-up rotate') : $('.button__up').removeClass('.js-button-up rotate')
     });
 
     $('.js-open-menu').on('click', function() {
@@ -157,7 +157,7 @@ $(document).ready(function () {
                 $(`.modal--price[data-type="${type}"]`).find('[data-full]').find('.js-modal-price-text').text(full);
             }
         });
-    } 
+    }
 });
 
 $(document).on('keydown', function (e) {

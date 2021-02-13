@@ -31,7 +31,7 @@
         max-width: 900px;
         z-index: 1;
         width: 100%;
-        transform: translate(-50px, -50px);  
+        transform: translate(-50px, -50px);
 
         &-item {
             position: relative;   
@@ -47,11 +47,10 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             min-height: 400px;
             background: #ffffff;
-            padding-left: 246px;
-            padding-right: 127px;
+            padding: 30px 127px 30px 246px;
 
             @media screen and (max-width: $screen-sm-down) {
                padding-left: 90px;

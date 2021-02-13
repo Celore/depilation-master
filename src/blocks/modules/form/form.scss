@@ -63,7 +63,7 @@
         border: 1px solid #000000;
         padding: 15px;
         background-color: transparent;
-        &[data-type='date'] {
+        &[data-type="date"] {
             background-image: url(../img/icon/calendar.svg);
             background-position: 96% center;
             background-repeat: no-repeat;
@@ -72,10 +72,10 @@
         &--light {
             color: #ABAAAA;
             border: 1px solid #FFFFFF;
-        }
 
-        &::placeholder {
-            color: #CECECE;
+            &::placeholder {
+                color: #CECECE;
+            }
         }
     }
 
@@ -88,6 +88,10 @@
         padding: 15px;
         font-family: $FontText;
         font-size: 12px;
+
+        &::placeholder {
+            color: #CECECE;
+        }
     }
 
     &--full {

@@ -27,7 +27,7 @@ gulp.task("styles", () => {
             cascade: false,
             grid: true
         })))
-        .pipe(gulpif(production, mincss({
+        /*.pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
                 1: {
                     specialComments: 0,
@@ -43,7 +43,7 @@ gulp.task("styles", () => {
                     removeUnusedAtRules: false
                 }
             }
-        })))
+        })))*/
         // .pipe(gulpif(production, rename({
         //     suffix: ".min"
         // })))

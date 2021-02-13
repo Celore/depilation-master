@@ -13,7 +13,6 @@
             }
         }
         &-item {
-            border: 0.5px solid #000000;
             max-width: 1000px;
             margin: auto;
             &.swiper-slide-active {
@@ -47,15 +46,31 @@
     }
 
     &__text {
-        padding: 30px 50px;
+        padding: 10px 50px;
         width: 100%;
+        font-family: Montserrat, helvetica, sans-serif, serif, -apple-system;
 
         @media screen and (max-width: $screen-sm-down) {
             padding: 20px 0px 0 0px;
         }
     }
 
+    &__title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 10px;
+        font-family: "Playfair Display", helvetica, sans-serif, serif, -apple-system;
+
+        @media screen and (max-width: $screen-sm-down) {
+        }
+    }
+
     .swiper-slide-next {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .swiper-slide-duplicate-prev {
         opacity: 0;
         visibility: hidden;
     }
@@ -108,5 +123,9 @@
 
     @media screen and (max-width: $screen-sm-down) {
         margin-top: 80px;
+    }
+
+    .common__button-box {
+        font-family: "Playfair Display", helvetica, sans-serif, serif, -apple-system;
     }
 }
