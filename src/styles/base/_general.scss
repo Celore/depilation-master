@@ -6,6 +6,10 @@ body {
     line-height: 28px;
     font-family: $FontMain;
     color: $main-color;
+
+    &.overflow {
+        overflow: hidden;
+    }
 }
 
 * {
