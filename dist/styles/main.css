@@ -3002,9 +3002,15 @@ ol {
   margin-top: 300px;
 }
 
+.blog__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .blog__slider {
   margin-top: 62px;
   position: relative;
+  overflow: visible;
 }
 
 .blog__slider-inner {
@@ -3013,16 +3019,10 @@ ol {
 }
 
 .blog__slider-item {
-  max-width: 1000px;
   margin: auto;
 }
 
-.blog__slider-item.swiper-slide-active {
-  opacity: 1 !important;
-}
-
 .blog .swiper-wrapper {
-  max-width: 1000px;
   margin: auto;
 }
 
@@ -3049,21 +3049,9 @@ ol {
   font-family: "Playfair Display", helvetica, sans-serif, serif, -apple-system;
 }
 
-.blog .swiper-slide-next {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.blog .swiper-slide-duplicate-prev {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .blog .swiper-button__wrap {
-  position: relative;
-  width: 100%;
-  margin-top: 103px;
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   position: absolute;
@@ -3074,13 +3062,14 @@ ol {
 
 .blog .swiper-button-prev {
   display: block;
+  position: absolute;
+  left: -20%;
   width: 50px;
-  position: unset;
   margin-right: 42px;
 }
 
 .blog .swiper-button-prev:after {
-  content: '';
+  content: "";
 }
 
 .blog .swiper-button-prev svg {
@@ -3089,12 +3078,13 @@ ol {
 
 .blog .swiper-button-next {
   display: block;
+  position: absolute;
+  right: -20%;
   width: 50px;
-  position: unset;
 }
 
 .blog .swiper-button-next:after {
-  content: '';
+  content: "";
 }
 
 .blog .common__button-box {
@@ -3110,6 +3100,14 @@ ol {
 @media screen and (max-width: 1550px) {
   .reasons__image-item {
     width: 250px;
+  }
+
+  .blog .swiper-button-prev {
+    left: -10%;
+  }
+
+  .blog .swiper-button-next {
+    right: -10%;
   }
 }
 
@@ -3139,6 +3137,14 @@ ol {
 
   .modal__price .price__part {
     display: none;
+  }
+
+  .blog .swiper-button-prev {
+    left: 0;
+  }
+
+  .blog .swiper-button-next {
+    right: 0;
   }
 }
 
@@ -3550,7 +3556,8 @@ ol {
 
   .blog .swiper-button__wrap {
     align-items: flex-start;
-    top: 20%;
+    top: 35%;
+    bottom: unset;
   }
 
   .blog .common__subtitle {

@@ -1,9 +1,15 @@
 .blog {
     margin-top: 300px;
 
+    &__container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
     &__slider {
         margin-top: 62px;
         position: relative;
+        overflow: visible;
         &-inner {
             display: flex;
             align-items: flex-start;
@@ -13,11 +19,7 @@
             }
         }
         &-item {
-            max-width: 1000px;
             margin: auto;
-            &.swiper-slide-active {
-                opacity: 1 !important;
-            }
 
             @media screen and (max-width: $screen-sm-down) {
                 padding: 0 18px;
@@ -27,7 +29,6 @@
     }
 
     .swiper-wrapper {
-        max-width: 1000px;
         margin: auto;
     }
 
@@ -65,21 +66,10 @@
         }
     }
 
-    .swiper-slide-next {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    .swiper-slide-duplicate-prev {
-        opacity: 0;
-        visibility: hidden;
-    }
 
     .swiper-button__wrap {
-        position: relative;
-        width: 100%;
-        margin-top: 103px;
         display: flex;
+        width: 100%;
         align-items: center;
         justify-content: space-between;
         position: absolute;
@@ -90,16 +80,28 @@
 
         @media screen and (max-width: $screen-sm-down) {
             align-items: flex-start;
-            top: 20%;
+            top: 35%;
+            bottom: unset;
         }
     }
+
     .swiper-button-prev {
         display: block;
+        position: absolute;
+        left: -20%;
         width: 50px;
-        position: unset;
         margin-right: 42px;
+
+        @media screen and (max-width: $screen-xl) {
+            left: -10%;
+        }
+
+        @media screen and (max-width: $screen-xl-down) {
+            left: 0;
+        }
+
         &:after {
-            content: '';
+            content: "";
         }
         svg {
             transform: rotate(-180deg);
@@ -108,10 +110,20 @@
 
     .swiper-button-next {
         display: block;
+        position: absolute;
+        right: -20%;
         width: 50px;
-        position: unset;
+
+        @media screen and (max-width: $screen-xl) {
+            right: -10%;
+        }
+
+        @media screen and (max-width: $screen-xl-down) {
+            right: 0;
+        }
+
         &:after {
-            content: '';
+            content: "";
         }
     }
 
